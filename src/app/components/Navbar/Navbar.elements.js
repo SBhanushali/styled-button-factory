@@ -51,10 +51,10 @@ export const HamburgerIcon = styled.div`
 `;
 
 export const Cross = styled(FaTimes)`
-  color: #000;
+  color: #fdbb2d;
 `;
 export const Hamburger = styled(FaBars)`
-  color: #000;
+  color: #fdbb2d;
 `;
 
 export const NavMenu = styled.ul`
