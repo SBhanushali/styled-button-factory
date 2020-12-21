@@ -6,6 +6,7 @@ import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
   background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -20,7 +21,6 @@ export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  box-shadow: 0 4px 12px rgba(36, 50, 66, 0.05);
   max-width: 100%;
 `;
 
@@ -96,10 +96,14 @@ export const NavItem = styled.li`
 export const NavLink = styled(Link)`
   color: #000;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+
+  &:hover {
+    color: #fdbb2d;
+  }
 
   @media screen and (max-width: 960px) {
     text-align: center;
