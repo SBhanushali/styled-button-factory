@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { layout } from "styled-system";
+import { space, layout, flexbox } from "styled-system";
 
 const Column = styled.div`
-  ${layout}
+  ${space};
+  ${layout};
+  ${flexbox};
 `;
 
 export default Column;
