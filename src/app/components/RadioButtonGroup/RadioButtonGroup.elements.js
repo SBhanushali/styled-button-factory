@@ -26,7 +26,7 @@ const activeState = css`
 export const RadioButton = styled.label`
   ${({ active }) => active && activeState};
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   flex-direction: row;
   align-items: center;
   padding: 10px;
