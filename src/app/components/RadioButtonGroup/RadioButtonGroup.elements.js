@@ -5,6 +5,7 @@ export const RadioGroup = styled.div`
   background: rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   justify-content: space-between;
+  width: max-content;
   display: flex;
   ${space}
   ${layout}
@@ -25,6 +26,7 @@ const activeState = css`
 export const RadioButton = styled.label`
   ${({ active }) => active && activeState};
   display: flex;
+  font-size: 18px;
   flex-direction: row;
   align-items: center;
   padding: 10px;
