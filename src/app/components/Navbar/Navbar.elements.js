@@ -6,13 +6,12 @@ import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
   background: #ffffff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  height: 80px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  height: 9vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
   z-index: 999;
 `;
@@ -42,7 +41,7 @@ export const HamburgerIcon = styled.div`
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: -10px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.9rem;
