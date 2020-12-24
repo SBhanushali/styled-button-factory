@@ -8,9 +8,14 @@ import {
 
 const RadioButtonGroup = ({ values, selected, onChange }) => {
   return (
-    <RadioGroup height="41px" mt="4px">
+    <RadioGroup mt="4px">
       {values.map((value, key) => (
-        <RadioButton key={key} active={selected === value} margin="3px">
+        <RadioButton
+          key={key}
+          active={selected === value}
+          margin="3px"
+          fontSize={[null, null, null, "1rem"]}
+        >
           <RadioInput
             type="radio"
             value={value}

@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
-import { space, layout } from "styled-system";
+import { space, layout, typography } from "styled-system";
 
 export const RadioGroup = styled.div`
   background: rgba(0, 0, 0, 0.05);
   border-radius: 12px;
-  justify-content: space-between;
-  width: max-content;
-  display: flex;
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
   ${space}
   ${layout}
 `;
@@ -25,10 +26,8 @@ const activeState = css`
 
 export const RadioButton = styled.label`
   ${({ active }) => active && activeState};
-  display: flex;
-  font-size: 16px;
-  flex-direction: row;
-  align-items: center;
+  text-align: center;
+  ${typography};
   padding: 10px;
   ${space}
   &:hover {
