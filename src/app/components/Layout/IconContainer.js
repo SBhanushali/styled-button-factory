@@ -3,6 +3,13 @@ import Box from "./Box";
 
 const IconContainer = styled(Box)`
   text-align: center;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0px -2px 5px rgb(255, 255, 255),
+      inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+  }
 `;
 
 export default IconContainer;
