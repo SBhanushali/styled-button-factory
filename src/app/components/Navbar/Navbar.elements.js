@@ -6,7 +6,7 @@ import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
   background: #ffffff;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
   height: 9vh;
   display: flex;
   justify-content: center;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { typography } from "styled-system";
+import { typography, space } from "styled-system";
 
 const Text = styled.p`
   ${typography}
-  margin:  0;
+  margin: 0;
+  ${space};
 `;
 
 export default Text;
