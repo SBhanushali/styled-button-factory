@@ -6,10 +6,8 @@ const Container = styled.span`
   align-items: center;
   ${layout}
   ${space}
-  /* width: 150px;
-  max-width: 150px; */
-  padding: 4px 12px;
-  border: 1px solid #bfc9d9;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 
   input[type="color"] {
@@ -26,7 +24,7 @@ const Container = styled.span`
       height: 24px;
     }
     &::-webkit-color-swatch {
-      border: 1px solid #bfc9d9;
+      border: none;
       border-radius: 4px;
       padding: 0;
     }
@@ -35,7 +33,8 @@ const Container = styled.span`
   input[type="text"] {
     border: none;
     width: 100%;
-    font-size: 14px;
+    background-color: #f2f2f2;
+    font-size: 1rem;
   }
 `;
 
