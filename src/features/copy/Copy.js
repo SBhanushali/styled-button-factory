@@ -12,7 +12,7 @@ const CopyIcon = styled(MdContentCopy)`
 
 const Copy = () => {
   return (
-    <IconContainer shadow>
+    <IconContainer shadow tabIndex="0">
       <CopyIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );

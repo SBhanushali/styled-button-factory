@@ -12,7 +12,7 @@ const UndoIcon = styled(MdUndo)`
 
 const Undo = () => {
   return (
-    <IconContainer shadow>
+    <IconContainer shadow tabIndex="0">
       <UndoIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );

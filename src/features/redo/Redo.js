@@ -12,7 +12,7 @@ const RedoIcon = styled(MdRedo)`
 
 const Redo = () => {
   return (
-    <IconContainer shadow>
+    <IconContainer shadow tabIndex="0">
       <RedoIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );
