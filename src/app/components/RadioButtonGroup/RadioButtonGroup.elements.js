@@ -5,7 +5,6 @@ export const RadioGroup = styled.div`
   background: rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   display: grid;
-  gap: 0.2rem;
   grid-template-columns: repeat(2, 1fr);
   width: auto;
   ${space}
@@ -28,8 +27,13 @@ export const RadioButton = styled.label`
   ${({ active }) => active && activeState};
   text-align: center;
   ${typography};
-  padding: 10px;
   ${space}
+  &:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
   &:hover {
     background: #ffffff;
     box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
