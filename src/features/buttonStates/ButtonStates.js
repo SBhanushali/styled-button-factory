@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Text, RadioButtonGroup } from "../../app/components";
-const values = ["Default", "Hover", "Active", "Disabled"];
+const values = ["Default", "Hover", "Disabled"];
 const ButtonStates = () => {
   return (
-    <Box shadow borderRadius="10px" p="10px" pb="15px">
+    <Box shadow borderRadius="10px" p="10px">
       <Box>
-        <Text fontWeight="bold" fontSize="14px" mb="2em">
+        <Text fontWeight="bold" fontSize="14px">
           Button States
         </Text>
         <RadioButtonGroup values={values} />
