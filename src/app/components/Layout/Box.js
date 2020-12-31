@@ -7,8 +7,14 @@ const shadow = css`
   border-radius: 10px;
 `;
 
+const disabled = css`
+  pointer-events: none;
+  opacity: 0.4;
+`;
+
 const Box = styled.div`
   ${(props) => props.shadow && shadow};
+  ${(props) => props.disabled && disabled};
   ${space}
   ${color}
   ${border}
