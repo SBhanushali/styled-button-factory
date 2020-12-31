@@ -1,5 +1,8 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { layout, space } from "styled-system";
+import { useDebouncedEffect } from "../hooks/useDebouncedEffect";
 
 const Container = styled.span`
   display: inline-flex;
@@ -38,13 +41,30 @@ const Container = styled.span`
   }
 `;
 
-const ColorPicker = (props) => {
+const ColorPicker = ({ value, action }) => {
+  const [color, setColor] = useState(value);
+  const dispatch = useDispatch();
+  useDebouncedEffect(
+    () => {
+      dispatch(action(color));
+    },
+    50,
+    [color]
+  );
   return (
     <Container>
-      <input type="color" {...props} />
-      <input type="text" {...props} />
+      <input
+        type="color"
+        value={value}
+        onChange={(e) => setColor(e.target.value)}
+      />
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setColor(e.target.value)}
+      />
     </Container>
   );
 };
 
-export default ColorPicker;
+export default React.memo(ColorPicker);
