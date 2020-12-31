@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 export const canvasBackgroundSlice = createSlice({
   name: "canvasBackground",
   initialState: {
-    backgroundType: "solid",
+    backgroundType: "Solid",
     backgroundColor: "#ffffff",
-    gradientType: "linear",
+    gradientType: "Linear",
     gradientStart: "#ffffff",
     gradientEnd: "#ffffff",
     gradientAngle: 0,
