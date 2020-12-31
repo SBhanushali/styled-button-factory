@@ -32,18 +32,13 @@ const SelectStyled = styled(AntSelect)`
   }
 `;
 
-const Select = ({ placeholder, values }) => {
+const Select = ({ placeholder, values, action, selected }) => {
   return (
-    <SelectStyled
-      showSearch
-      placeholder={placeholder}
-      optionFilterProp="children"
-      filterOption={(input, option) =>
-        option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-      }
-    >
+    <SelectStyled placeholder={placeholder} value={selected} onChange={action}>
       {values.map((value) => (
-        <Option value={value}></Option>
+        <Option key={value} value={value}>
+          {value}
+        </Option>
       ))}
     </SelectStyled>
   );
