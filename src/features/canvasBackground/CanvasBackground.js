@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setBackgroundType,
@@ -10,13 +10,23 @@ import {
 } from "./canvasBackgroundSlice";
 import { Box, RadioButtonGroup, ColorPicker, Text } from "../../app/components";
 import CircularSlider from "@fseehawer/react-circular-slider";
+import { useDebouncedEffect } from "../../app/hooks/useDebouncedEffect";
 
 const backgroundTypes = ["Gradient", "Solid"];
 const gradientTypes = ["Linear", "Radial"];
 
 const CanvasBackground = () => {
   const canvasState = useSelector((state) => state.canvas);
+  const [angle, setAngle] = useState(canvasState.gradientAngle);
   const dispatch = useDispatch();
+  useDebouncedEffect(
+    () => {
+      dispatch(setGradientAngle(angle));
+    },
+    100,
+    [angle]
+  );
+
   return (
     <Box shadow p="10px">
       <Text fontWeight="bold" fontSize="14px">
@@ -100,7 +110,7 @@ const CanvasBackground = () => {
             trackSize={4}
             progressSize={4}
             width="70"
-            onChange={(value) => dispatch(setGradientAngle(value))}
+            onChange={(value) => setAngle(value)}
           ></CircularSlider>
         </Box>
       </Box>
