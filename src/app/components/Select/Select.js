@@ -35,9 +35,9 @@ const SelectStyled = styled(AntSelect)`
 const Select = ({ placeholder, values, action, selected }) => {
   return (
     <SelectStyled placeholder={placeholder} value={selected} onChange={action}>
-      {values.map((value) => (
+      {values.map(({ option, value }) => (
         <Option key={value} value={value}>
-          {value}
+          {option}
         </Option>
       ))}
     </SelectStyled>
