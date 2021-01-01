@@ -18,6 +18,7 @@ import {
   setBorderWidth,
   setHasBorder,
 } from "../../features/ButtonBorderSlice";
+import { border } from "../constants/Borders";
 
 const ButtonBorder = () => {
   const borderState = useSelector((state) => state.buttonBorder);
@@ -40,16 +41,7 @@ const ButtonBorder = () => {
           <Row alignItems="center" my={["10px", "10px", "10px", "10px"]}>
             <Select
               placeholder="Border Type"
-              values={[
-                "Solid",
-                "Dotted",
-                "Dashed",
-                "Double",
-                "Grove",
-                "Ridge",
-                "Inset",
-                "Outset",
-              ]}
+              values={border}
               selected={borderState.borderType}
               action={(value) => dispatch(setBorderType(value))}
             />
@@ -69,6 +61,8 @@ const ButtonBorder = () => {
               <InputSlider
                 value={borderState.borderWidth}
                 action={setBorderWidth}
+                min={0}
+                max={100}
               />
             </Col>
           </Row>
@@ -78,6 +72,8 @@ const ButtonBorder = () => {
               <InputSlider
                 value={borderState.borderRadius}
                 action={setBorderRadius}
+                min={0}
+                max={100}
               />
             </Col>
           </Row>
