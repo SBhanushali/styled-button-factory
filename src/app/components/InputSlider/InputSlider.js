@@ -22,7 +22,7 @@ const InputNumberStyled = styled(InputNumber)`
   }
 `;
 
-const InputSlider = ({ value, action }) => {
+const InputSlider = ({ value, action, min, max }) => {
   const [range, setRange] = useState(value);
   const dispatch = useDispatch();
   useDebouncedEffect(
@@ -35,8 +35,8 @@ const InputSlider = ({ value, action }) => {
   return (
     <>
       <Slider
-        min={0}
-        max={100}
+        min={min}
+        max={max}
         value={typeof range === "number" ? range : 0}
         style={{ width: "55%" }}
         trackStyle={{ backgroundColor: "#fdbb2c" }}
@@ -44,8 +44,8 @@ const InputSlider = ({ value, action }) => {
         onChange={(val) => setRange(val)}
       />
       <InputNumberStyled
-        min={0}
-        max={100}
+        min={min}
+        max={max}
         value={range}
         formatter={(value) => `${value}px`}
         parser={(value) => value.replace("px", "")}
