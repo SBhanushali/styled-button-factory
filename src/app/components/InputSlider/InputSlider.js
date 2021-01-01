@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { InputNumber, Slider } from "antd";
-import { useDebouncedEffect } from "../../hooks/useDebouncedEffect";
 import { useDispatch } from "react-redux";
 
 const InputNumberStyled = styled(InputNumber)`
@@ -23,33 +22,26 @@ const InputNumberStyled = styled(InputNumber)`
 `;
 
 const InputSlider = ({ value, action, min, max }) => {
-  const [range, setRange] = useState(value);
   const dispatch = useDispatch();
-  useDebouncedEffect(
-    () => {
-      dispatch(action(range));
-    },
-    100,
-    [range]
-  );
+
   return (
     <>
       <Slider
         min={min}
         max={max}
-        value={typeof range === "number" ? range : 0}
+        value={typeof range === "number" ? value : 0}
         style={{ width: "55%" }}
         trackStyle={{ backgroundColor: "#fdbb2c" }}
         handleStyle={{ borderColor: "#fdbb2c" }}
-        onChange={(val) => setRange(val)}
+        onChange={(val) => dispatch(action(val))}
       />
       <InputNumberStyled
         min={min}
         max={max}
-        value={range}
+        value={value}
         formatter={(value) => `${value}px`}
         parser={(value) => value.replace("px", "")}
-        onChange={(val) => setRange(val)}
+        onChange={(val) => dispatch(action(val))}
       />
     </>
   );
