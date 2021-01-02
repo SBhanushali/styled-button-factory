@@ -16,7 +16,7 @@ const backgroundTypes = ["Gradient", "Solid"];
 const gradientTypes = ["Linear", "Radial"];
 
 const CanvasBackground = () => {
-  const canvasState = useSelector((state) => state.canvas);
+  const canvasState = useSelector((state) => state.canvas.present);
   const [angle, setAngle] = useState(canvasState.gradientAngle);
   const dispatch = useDispatch();
   useDebouncedEffect(

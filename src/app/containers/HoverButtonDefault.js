@@ -7,7 +7,7 @@ import {
 import { Row, Col, InputSlider, ColorPicker } from "../components";
 
 const HoverButtonDefault = () => {
-  const defaultState = useSelector((state) => state.hoverButtonDefault);
+  const defaultState = useSelector((state) => state.hoverButtonDefault.present);
   return (
     <>
       <Row alignItems="center">

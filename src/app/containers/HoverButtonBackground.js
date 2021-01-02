@@ -16,7 +16,9 @@ const backgroundTypes = ["Gradient", "Solid"];
 const gradientTypes = ["Linear", "Radial"];
 
 const HoverButtonBackground = () => {
-  const buttonState = useSelector((state) => state.hoverButtonBackground);
+  const buttonState = useSelector(
+    (state) => state.hoverButtonBackground.present
+  );
   const [angle, setAngle] = useState(buttonState.gradientAngle);
   const dispatch = useDispatch();
   useDebouncedEffect(

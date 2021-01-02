@@ -23,7 +23,7 @@ import { cursors } from "../constants/Cursors";
 import { fonts } from "../constants/Fonts";
 
 const ButtonDefault = () => {
-  const defaultState = useSelector((state) => state.buttonDefault);
+  const defaultState = useSelector((state) => state.buttonDefault.present);
   const dispatch = useDispatch();
   return (
     <>
