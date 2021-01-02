@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import undoable from "redux-undo";
 import canvasBackgroundReducer from "../features/canvasBackgroundSlice";
 import buttonBackgroundReducer from "../features/ButtonBackgroundSlice";
 import buttonBorderReducer from "../features/ButtonBorderSlice";
@@ -11,14 +12,14 @@ import hoverButtonDefaultReducer from "../features/HoverButtonDefaultSlice";
 
 export default configureStore({
   reducer: {
-    canvas: canvasBackgroundReducer,
-    buttonDefault: buttonDefaultReducer,
-    buttonBackground: buttonBackgroundReducer,
-    buttonBorder: buttonBorderReducer,
-    buttonShadow: buttonShadowReducer,
-    hoverButtonDefault: hoverButtonDefaultReducer,
-    hoverButtonBackground: hoverButtonBackgroundReducer,
-    hoverButtonBorder: hoverButtonBorderReducer,
-    hoverButtonShadow: hoverButtonShadowReducer,
+    canvas: undoable(canvasBackgroundReducer),
+    buttonDefault: undoable(buttonDefaultReducer),
+    buttonBackground: undoable(buttonBackgroundReducer),
+    buttonBorder: undoable(buttonBorderReducer),
+    buttonShadow: undoable(buttonShadowReducer),
+    hoverButtonDefault: undoable(hoverButtonDefaultReducer),
+    hoverButtonBackground: undoable(hoverButtonBackgroundReducer),
+    hoverButtonBorder: undoable(hoverButtonBorderReducer),
+    hoverButtonShadow: undoable(hoverButtonShadowReducer),
   },
 });
