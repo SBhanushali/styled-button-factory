@@ -39,8 +39,6 @@ const InputSlider = ({ value, action, min, max }) => {
         min={min}
         max={max}
         value={value}
-        formatter={(value) => `${value}px`}
-        parser={(value) => value.replace("px", "")}
         onChange={(val) => dispatch(action(val))}
       />
     </>
