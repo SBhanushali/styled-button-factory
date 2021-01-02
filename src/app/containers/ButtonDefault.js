@@ -21,6 +21,7 @@ import {
 } from "../components";
 import { cursors } from "../constants/Cursors";
 import { fonts } from "../constants/Fonts";
+import { weights } from "../constants/weights";
 
 const ButtonDefault = () => {
   const defaultState = useSelector((state) => state.buttonDefault.present);
@@ -63,19 +64,14 @@ const ButtonDefault = () => {
         </Col>
         <Col
           width={[1, 1, 1 / 2, 45 / 100]}
-          display="flex"
-          alignItems="center"
           my={["10px", "10px", "10px", "10px"]}
         >
-          <Col width="30%">Font Weight</Col>
-          <Col width="70%" display="flex" justifyContent="space-between">
-            <InputSlider
-              value={defaultState.fontWeight}
-              action={setFontWeight}
-              min={0}
-              max={100}
-            />
-          </Col>
+          <Select
+            placeholder="Select Font Weight"
+            values={weights}
+            selected={defaultState.fontWeight}
+            action={(value) => dispatch(setFontWeight(value))}
+          />
         </Col>
       </Row>
       <Row>
