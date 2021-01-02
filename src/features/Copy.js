@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { typography } from "styled-system";
 import { MdContentCopy } from "react-icons/md";
-import { IconContainer } from "../../app/components";
+import { IconContainer } from "../app/components";
 
 const CopyIcon = styled(MdContentCopy)`
   ${typography};

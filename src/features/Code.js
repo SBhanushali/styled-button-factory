@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { typography } from "styled-system";
 import { IoCodeSlash } from "react-icons/io5";
-import { IconContainer } from "../../app/components";
+import { IconContainer } from "../app/components";
 
 const CodeIcon = styled(IoCodeSlash)`
   ${typography}
