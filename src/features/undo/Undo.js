@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { ActionCreators } from "redux-undo";
+import { useDispatch } from "react-redux";
 import { typography } from "styled-system";
 import { MdUndo } from "react-icons/md";
 import { IconContainer } from "../../app/components";
@@ -11,8 +13,14 @@ const UndoIcon = styled(MdUndo)`
 `;
 
 const Undo = () => {
+  const dispatch = useDispatch();
   return (
-    <IconContainer shadow tabIndex="0">
+    <IconContainer
+      as="button"
+      shadow
+      tabIndex="0"
+      onClick={() => dispatch(ActionCreators.undo())}
+    >
       <UndoIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );

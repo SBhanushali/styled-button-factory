@@ -1,4 +1,6 @@
 import React from "react";
+import { ActionCreators } from "redux-undo";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { typography } from "styled-system";
 import { MdRedo } from "react-icons/md";
@@ -11,8 +13,14 @@ const RedoIcon = styled(MdRedo)`
 `;
 
 const Redo = () => {
+  const dispatch = useDispatch();
   return (
-    <IconContainer shadow tabIndex="0">
+    <IconContainer
+      shadow
+      tabIndex="0"
+      as="button"
+      onClick={() => dispatch(ActionCreators.redo())}
+    >
       <RedoIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );
