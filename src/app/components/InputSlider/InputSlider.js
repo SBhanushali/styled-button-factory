@@ -29,7 +29,7 @@ const InputSlider = ({ value, action, min, max }) => {
       <Slider
         min={min}
         max={max}
-        value={typeof range === "number" ? value : 0}
+        value={typeof value === "number" ? value : 0}
         style={{ width: "55%" }}
         trackStyle={{ backgroundColor: "#fdbb2c" }}
         handleStyle={{ borderColor: "#fdbb2c" }}
