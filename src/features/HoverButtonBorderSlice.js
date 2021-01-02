@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const hoverButtonBorderSlice = createSlice({
-  name: "buttonBorder",
+  name: "hoverButtonBorder",
   initialState: {
     hasBorder: true,
     borderType: undefined,

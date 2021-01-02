@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const hoverButtonDefaultSlice = createSlice({
-  name: "buttonDefault",
+  name: "hoverButtonDefault",
   initialState: {
     fontSize: 0,
     textColor: "#000000",

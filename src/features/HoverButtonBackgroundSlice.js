@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const hoverButtonBackgroundSlice = createSlice({
-  name: "buttonBackground",
+  name: "hoverButtonBackground",
   initialState: {
     backgroundType: "Solid",
     backgroundColor: "#ffffff",

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const hoverButtonShadowSlice = createSlice({
-  name: "buttonShadow",
+  name: "hoverButtonShadow",
   initialState: {
     hasShadow: true,
     shadowType: "Outset",
