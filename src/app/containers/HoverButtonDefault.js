@@ -22,7 +22,7 @@ const HoverButtonDefault = () => {
             <InputSlider
               value={defaultState.fontSize}
               action={setFontSize}
-              min={0}
+              min={1}
               max={100}
             />
           </Col>

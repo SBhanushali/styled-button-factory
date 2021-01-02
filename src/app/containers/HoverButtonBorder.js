@@ -61,7 +61,7 @@ const HoverButtonBorder = () => {
               <InputSlider
                 value={borderState.borderWidth}
                 action={setBorderWidth}
-                min={0}
+                min={1}
                 max={100}
               />
             </Col>
