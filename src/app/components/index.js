@@ -12,3 +12,4 @@ export { default as InputSlider } from "./InputSlider";
 export { default as StyledSwitch } from "./StyledSwitch";
 export { default as TextInput } from "./TextInput";
 export { default as TabsStyled } from "./TabsStyled";
+export { default as Modal } from "./Modal";
