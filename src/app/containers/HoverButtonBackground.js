@@ -39,8 +39,8 @@ const HoverButtonBackground = () => {
         gridTemplateRows="1fr 1fr  1fr 1fr"
         gridGap="0.2rem"
         gridTemplateAreas="
-        'BackgroundType GradientSolid GradientSolid .'
-        'GradientType LinearSolid LinearSolid .'
+        'BackgroundType GradientSolid GradientSolid GradientSolid'
+        'GradientType LinearSolid LinearSolid LinearSolid'
         'GradientStart StartColor StartColor Angle'
         'GradientEnd EndColor EndColor Angle'"
       >
