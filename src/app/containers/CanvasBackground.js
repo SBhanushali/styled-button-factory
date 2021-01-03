@@ -27,7 +27,7 @@ const CanvasBackground = () => {
     [angle]
   );
   return (
-    <Box shadow p="10px">
+    <Box boundary p="10px">
       <Text fontWeight="bold" fontSize="14px">
         Canvas Background
       </Text>

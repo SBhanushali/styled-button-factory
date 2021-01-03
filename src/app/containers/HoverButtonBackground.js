@@ -29,7 +29,7 @@ const HoverButtonBackground = () => {
     [angle]
   );
   return (
-    <Box shadow p="10px">
+    <Box boundary p="10px">
       <Text fontWeight="bold" fontSize="14px">
         Button Background
       </Text>

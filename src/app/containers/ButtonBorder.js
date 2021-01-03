@@ -25,7 +25,7 @@ const ButtonBorder = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <Box shadow p="10px" width="100%" mb="5px" mt="5px">
+      <Box boundary p="10px" width="100%" mb="5px" mt="5px">
         <Box display="flex" justifyContent="space-between">
           <Text fontWeight="bold" fontSize="14px">
             Button Border
