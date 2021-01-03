@@ -3,8 +3,9 @@ import Box from "./Box";
 
 const IconContainer = styled(Box)`
   text-align: center;
+  border: 1px solid #f7f7f8;
+  border-radius: 10px;
   outline: none;
-  border: none;
   background: transparent;
 
   &:active {

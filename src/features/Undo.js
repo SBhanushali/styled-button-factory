@@ -17,7 +17,6 @@ const Undo = () => {
   return (
     <IconContainer
       as="button"
-      shadow
       tabIndex="0"
       onClick={() => dispatch(ActionCreators.undo())}
     >

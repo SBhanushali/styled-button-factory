@@ -16,7 +16,6 @@ const Redo = () => {
   const dispatch = useDispatch();
   return (
     <IconContainer
-      shadow
       tabIndex="0"
       as="button"
       onClick={() => dispatch(ActionCreators.redo())}

@@ -12,7 +12,7 @@ const CodeIcon = styled(IoCodeSlash)`
 
 const Code = () => {
   return (
-    <IconContainer shadow tabIndex="0">
+    <IconContainer tabIndex="0">
       <CodeIcon fontSize={[24, 24, 24, 36]} />
     </IconContainer>
   );

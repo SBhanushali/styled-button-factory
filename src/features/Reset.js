@@ -17,7 +17,6 @@ const Reset = () => {
   return (
     <IconContainer
       as="button"
-      shadow
       tabIndex="0"
       onClick={() => dispatch(resetStore())}
     >
