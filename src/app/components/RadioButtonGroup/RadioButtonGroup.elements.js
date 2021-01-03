@@ -6,6 +6,7 @@ export const RadioGroup = styled.div`
   border-radius: 6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background: #f7f7f8;
   width: auto;
   ${space}
   ${layout}
@@ -18,10 +19,9 @@ export const RadioInput = styled.input`
 `;
 
 const activeState = css`
-  color: #000000;
+  color: #fdbb2c;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-weight: bolder;
-  background: #fdbb2c;
+  background: #ffffff;
   border-radius: 4px;
 `;
 
@@ -32,13 +32,13 @@ export const RadioButton = styled.label`
   ${space}
   &:focus {
     outline: none;
-    background: #fdbb2c;
-    color: #000000;
+    background: #ffffff;
+    color: #fdbb2c;
     font-weight: bolder;
     border-radius: 4px;
   }
   &:hover {
-    color: #000000;
+    color: #fdbb2c;
     font-weight: bolder;
     border-radius: 4px;
   }
