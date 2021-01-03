@@ -16,7 +16,8 @@ const Container = styled.span`
   input[type="color"] {
     margin-right: 8px;
     -webkit-appearance: none;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
     width: auto;
     height: auto;
     cursor: pointer;
@@ -36,7 +37,6 @@ const Container = styled.span`
   input[type="text"] {
     border: none;
     width: 100%;
-    background-color: #f2f2f2;
     font-size: 1rem;
   }
 `;
