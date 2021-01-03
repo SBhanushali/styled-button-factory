@@ -13,3 +13,5 @@ export { default as StyledSwitch } from "./StyledSwitch";
 export { default as TextInput } from "./TextInput";
 export { default as TabsStyled } from "./TabsStyled";
 export { default as Modal } from "./Modal";
+export { default as StyledButton } from "./StyledButton";
+export { default as StyledCanvas } from "./StyledCanvas";
