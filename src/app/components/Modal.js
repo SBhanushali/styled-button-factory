@@ -1,5 +1,6 @@
 import React, { useRef, useCallback, useEffect } from "react";
 import styled from "styled-components";
+import { layout } from "styled-system";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 
@@ -12,11 +13,10 @@ const Overlay = styled(motion.div)`
   z-index: 999;
   background: rgba(0, 0, 0, 0.3);
 `;
-
 const ModalContainer = styled(motion.div)`
-  width: 50%;
-  height: 50%;
-  background-color: white;
+  ${layout}
+  height: 70%;
+  background-color: #111c27;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,6 +26,7 @@ const ModalContainer = styled(motion.div)`
 const CloseButton = styled(FaTimes)`
   width: 20px;
   height: 20px;
+  color: white;
   position: absolute;
   right: 18px;
   top: 18px;
@@ -38,9 +39,9 @@ const modalVariant = {
   exit: { opacity: 0 },
 };
 const containerVariant = {
-  initial: { top: "25%", left: "25%", scale: 0 },
-  isOpen: { top: "25%", left: "25%", transition: { duration: 0.5 }, scale: 1 },
-  exit: { top: "25%", left: "25%", scale: 0 },
+  initial: { top: "-50%", transition: { type: "spring" } },
+  isOpen: { top: "50%" },
+  exit: { top: "-50%" },
 };
 
 const Modal = ({ handleClose, children, isOpen }) => {
@@ -78,7 +79,10 @@ const Modal = ({ handleClose, children, isOpen }) => {
           ref={modalRef}
           onClick={handleOverlayClose}
         >
-          <ModalContainer variants={containerVariant}>
+          <ModalContainer
+            variants={containerVariant}
+            width={[9 / 10, 9 / 10, 9 / 10, 1 / 2]}
+          >
             <CloseButton onClick={() => handleClose()} />
             {children}
           </ModalContainer>
