@@ -15,3 +15,4 @@ export { default as TabsStyled } from "./TabsStyled";
 export { default as Modal } from "./Modal";
 export { default as StyledButton } from "./StyledButton";
 export { default as StyledCanvas } from "./StyledCanvas";
+export { default as CopyButton } from "./CopyButton";

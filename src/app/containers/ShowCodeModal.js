@@ -4,6 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import styled from "styled-components";
 import { Modal } from "../components";
+import { CopyButton } from "../components/";
 import { getShadow, getBackground, getBorder } from "../helpers";
 
 const ModalContent = styled.div`
@@ -67,7 +68,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
                   buttonShadow.spread,
                   buttonShadow.shadowColor
                 )
-              : ""
+              : "none"
           };
           ${
             buttonBorder.hasBorder
@@ -103,7 +104,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
                     hoverButtonShadow.spread,
                     hoverButtonShadow.shadowColor
                   )
-                : ""
+                : "none"
             };
             ${
               hoverButtonBorder.hasBorder
@@ -121,6 +122,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
             }
           }
         \`
+        <StyledButton>${buttonDefault.buttonText}</StyledButton>
       `;
   };
   console.log(code);
@@ -134,6 +136,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
         >
           {code}
         </SyntaxHighlighter>
+        <CopyButton text={code} />
       </ModalContent>
     </Modal>
   );
