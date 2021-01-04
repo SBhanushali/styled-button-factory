@@ -4,7 +4,7 @@ import { Select as AntSelect } from "antd";
 const { Option } = AntSelect;
 
 const SelectStyled = styled(AntSelect)`
-  width: 100%;
+  width: ${(props) => props.width};
   .ant-select-selector {
     height: 45px !important;
     border: 0 !important;
@@ -28,9 +28,14 @@ const SelectStyled = styled(AntSelect)`
   }
 `;
 
-const Select = ({ placeholder, values, action, selected }) => {
+const Select = ({ placeholder, values, action, selected, width }) => {
   return (
-    <SelectStyled placeholder={placeholder} value={selected} onChange={action}>
+    <SelectStyled
+      placeholder={placeholder}
+      value={selected}
+      onChange={action}
+      width={width}
+    >
       {values.map(({ option, value }) => (
         <Option key={value} value={value}>
           {option}

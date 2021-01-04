@@ -28,7 +28,7 @@ const HoverButtonDefault = () => {
           </Col>
         </Col>
         <Col
-          width={[1, 1, 1 / 2, 45 / 100]}
+          width={[1, 1, 1 / 2, 50 / 100]}
           display="flex"
           alignItems="center"
           my={["10px", "10px", 0, 0]}

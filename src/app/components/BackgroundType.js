@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, RadioButtonGroup, Text } from ".";
+import { Box, RadioButtonGroup } from ".";
 
 const values = ["Gradient", "Solid"];
 

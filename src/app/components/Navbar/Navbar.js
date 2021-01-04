@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { StyledButtonLogo } from "../../assets/svgexport-103.svg";
 
 import {
   Nav,
@@ -23,7 +22,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo href="/">
             <NavIcon />
           </NavLogo>
           <HamburgerIcon onClick={handleClick}>
@@ -31,10 +30,10 @@ const Navbar = () => {
           </HamburgerIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLink to="/docs">Docs</NavLink>
+              <NavLink href="/docs">Docs</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/github">Github</NavLink>
+              <NavLink href="/github">Github</NavLink>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

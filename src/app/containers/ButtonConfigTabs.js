@@ -13,15 +13,10 @@ import HoverButtonDefault from "./HoverButtonDefault";
 
 const { TabPane } = Tabs;
 
-function callback(key) {
-  console.log(key);
-}
-
 const ButtonConfigTabs = () => {
   return (
     <TabsStyled
       defaultActiveKey="1"
-      onChange={callback}
       style={{ padding: "10px", height: "auto" }}
     >
       <TabPane tab="Default" key="1">

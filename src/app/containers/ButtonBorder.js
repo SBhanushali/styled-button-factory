@@ -38,8 +38,15 @@ const ButtonBorder = () => {
           </StyledSwitch>
         </Box>
         <Box disabled={!borderState.hasBorder}>
-          <Row alignItems="center" my={["10px", "10px", "10px", "10px"]}>
+          <Row
+            alignItems="center"
+            my={["10px", "10px", "10px", "10px"]}
+            display="flex"
+            justifyContent="space-between"
+          >
+            Border Type
             <Select
+              width="70%"
               placeholder="Border Type"
               values={border}
               selected={borderState.borderType}

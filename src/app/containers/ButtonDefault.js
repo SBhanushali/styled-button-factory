@@ -15,7 +15,6 @@ import {
   Col,
   InputSlider,
   Select,
-  InputStyled,
   ColorPicker,
   TextInput,
 } from "../components";
@@ -36,8 +35,16 @@ const ButtonDefault = () => {
             action={setButtonText}
           />
         </Col>
-        <Col width={[1, 1, 1 / 2, 45 / 100]} my={["10px", "10px", 0, 0]}>
+        <Col
+          width={[1, 1, 1 / 2, 50 / 100]}
+          my={["10px", "10px", 0, 0]}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          Select Font
           <Select
+            width="70%"
             placeholder="Select Font"
             values={fonts}
             selected={defaultState.font}
@@ -63,10 +70,15 @@ const ButtonDefault = () => {
           </Col>
         </Col>
         <Col
-          width={[1, 1, 1 / 2, 45 / 100]}
+          width={[1, 1, 1 / 2, 50 / 100]}
           my={["10px", "10px", "10px", "10px"]}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
         >
+          Font Weight
           <Select
+            width="70%"
             placeholder="Select Font Weight"
             values={weights}
             selected={defaultState.fontWeight}
@@ -87,7 +99,7 @@ const ButtonDefault = () => {
           </Col>
         </Col>
         <Col
-          width={[1, 1, 1 / 2, 45 / 100]}
+          width={[1, 1, 1 / 2, 50 / 100]}
           display="flex"
           alignItems="center"
           my={["10px", "10px", 0, 0]}
@@ -109,8 +121,11 @@ const ButtonDefault = () => {
           display="flex"
           alignItems="center"
           my={["10px", "10px", "10px", "10px"]}
+          justifyContent="space-between"
         >
+          Cursor
           <Select
+            width="70%"
             placeholder="Cursor Type"
             values={cursors}
             selected={defaultState.cursor}
@@ -118,7 +133,7 @@ const ButtonDefault = () => {
           />
         </Col>
         <Col
-          width={[1, 1, 1 / 2, 45 / 100]}
+          width={[1, 1, 1 / 2, 50 / 100]}
           display="flex"
           alignItems="center"
           my={["10px", "10px", 0, 0]}
