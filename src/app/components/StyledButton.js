@@ -75,7 +75,6 @@ const StyledButton = styled.button`
   color: ${(props) => props.color};
   padding: ${(props) => `${props.paddingY}px ${props.paddingX}px`};
   cursor: ${(props) => (props.cursor ? props.cursor : "default")};
-  box-shadow: ${(props) => props.boxShadow};
   ${(props) => {
     if (props.backgroundType === "Solid") {
       return buttonBackgroundSolid;
