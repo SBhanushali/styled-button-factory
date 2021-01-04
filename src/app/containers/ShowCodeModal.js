@@ -83,7 +83,9 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
             buttonBorder.hasBorder &&
             `border-radius: ${buttonBorder.borderRadius}px;`
           }
-          &:hover {
+          ${
+            hoverButtonDefault.enableHover
+              ? `&:hover {
             font-size: ${hoverButtonDefault.fontSize}px;
             color: ${hoverButtonDefault.textColor};
             ${getBackground(
@@ -119,7 +121,8 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
             ${
               hoverButtonBorder.hasBorder &&
               `border-radius: ${hoverButtonBorder.borderRadius}px;`
-            }
+            }`
+              : ""
           }
         \`
         <StyledButton>${buttonDefault.buttonText}</StyledButton>
