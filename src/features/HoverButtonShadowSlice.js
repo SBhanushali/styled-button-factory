@@ -33,6 +33,9 @@ const hoverButtonShadowSlice = createSlice({
     setSpread: (state, action) => {
       state.spread = action.payload;
     },
+    setSyncShadow: (state, action) => {
+      return { ...state, ...action.payload };
+    },
   },
 });
 
@@ -44,6 +47,12 @@ export const {
   setVerticalPlacement,
   setBlur,
   setSpread,
+  setSyncShadow,
 } = hoverButtonShadowSlice.actions;
+
+export const syncShadow = () => (dispatch, setState) => {
+  const shadow = setState().buttonShadow.present;
+  dispatch(setSyncShadow(shadow));
+};
 
 export default hoverButtonShadowSlice.reducer;

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const hoverButtonBackgroundSlice = createSlice({
   name: "hoverButtonBackground",
@@ -29,6 +29,9 @@ export const hoverButtonBackgroundSlice = createSlice({
     setGradientAngle: (state, action) => {
       state.gradientAngle = action.payload;
     },
+    setSyncBackground: (state, action) => {
+      return { ...state, ...action.payload };
+    },
   },
 });
 
@@ -39,6 +42,12 @@ export const {
   setGradientStart,
   setGradientEnd,
   setGradientAngle,
+  setSyncBackground,
 } = hoverButtonBackgroundSlice.actions;
+
+export const syncBackground = () => (dispatch, setState) => {
+  const background = setState().buttonBackground.present;
+  dispatch(setSyncBackground(background));
+};
 
 export default hoverButtonBackgroundSlice.reducer;

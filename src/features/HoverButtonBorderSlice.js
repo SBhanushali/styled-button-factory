@@ -25,6 +25,9 @@ export const hoverButtonBorderSlice = createSlice({
     setBorderRadius: (state, action) => {
       state.borderRadius = action.payload;
     },
+    setSyncBorder: (state, action) => {
+      return { ...state, ...action.payload };
+    },
   },
 });
 
@@ -34,6 +37,12 @@ export const {
   setBorderColor,
   setBorderWidth,
   setBorderRadius,
+  setSyncBorder,
 } = hoverButtonBorderSlice.actions;
+
+export const syncBorder = () => (dispatch, setState) => {
+  const border = setState().buttonBorder.present;
+  dispatch(setSyncBorder(border));
+};
 
 export default hoverButtonBorderSlice.reducer;

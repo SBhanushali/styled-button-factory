@@ -5,8 +5,8 @@ const buttonDefaultSlice = createSlice({
   initialState: {
     buttonText: "Text",
     font: undefined,
-    fontSize: 0,
-    fontWeight: 0,
+    fontSize: 14,
+    fontWeight: undefined,
     textColor: "#000000",
     cursor: undefined,
     paddingX: 0,

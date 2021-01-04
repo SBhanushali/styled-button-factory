@@ -44,7 +44,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
   const generateCode = () => {
     return `
     const styledButton = styled.button\`
-          font-family: ${buttonDefault.fontFamily || ""};
+          font-family: ${buttonDefault.font || ""};
           font-size: ${buttonDefault.fontSize}px;
           font-weight: ${buttonDefault.fontWeight || ""};
           color: ${buttonDefault.textColor};
@@ -125,7 +125,6 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
         <StyledButton>${buttonDefault.buttonText}</StyledButton>
       `;
   };
-  console.log(code);
   return (
     <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
       <ModalContent>

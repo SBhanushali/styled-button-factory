@@ -3,10 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const hoverButtonDefaultSlice = createSlice({
   name: "hoverButtonDefault",
   initialState: {
-    fontSize: 0,
+    enableHover: false,
+    fontSize: 14,
     textColor: "#000000",
   },
   reducers: {
+    setEnableHover: (state, action) => {
+      state.enableHover = !state.enableHover;
+    },
     setFontSize: (state, action) => {
       state.fontSize = action.payload;
     },
@@ -16,6 +20,16 @@ const hoverButtonDefaultSlice = createSlice({
   },
 });
 
-export const { setFontSize, setTextColor } = hoverButtonDefaultSlice.actions;
+export const {
+  setEnableHover,
+  setFontSize,
+  setTextColor,
+} = hoverButtonDefaultSlice.actions;
+
+export const syncDefault = () => (dispatch, getState) => {
+  const { fontSize, textColor } = getState().buttonDefault.present;
+  dispatch(setFontSize(fontSize));
+  dispatch(setTextColor(textColor));
+};
 
 export default hoverButtonDefaultSlice.reducer;
