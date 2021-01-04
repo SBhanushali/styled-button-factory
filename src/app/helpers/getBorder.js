@@ -1,6 +1,8 @@
-const getBorder = (borderType, borderColor, borderWidth, borderRadius) => {
-  return `border: ${borderType || "solid"} ${borderColor} ${borderWidth}px;
-      border-radius: ${borderRadius}px;`;
+const getBorder = (borderType, borderColor, borderWidth) => {
+  let border = `border: ${
+    borderType || "solid"
+  } ${borderColor} ${borderWidth}px;`;
+  return border;
 };
 
 export default getBorder;
