@@ -10,6 +10,7 @@ import ButtonConfigTabs from "./app/containers/ButtonConfigTabs";
 import CanvasBackground from "./app/containers/CanvasBackground";
 import Playground from "./app/containers/Playground";
 import ShowCodeModal from "./app/containers/ShowCodeModal";
+import Footer from "./app/components/Footer";
 
 function App() {
   const [isOpen, toggle] = useState(false);
@@ -71,6 +72,7 @@ function App() {
           </Box>
         </Col>
       </Row>
+      <Footer />
     </>
   );
 }

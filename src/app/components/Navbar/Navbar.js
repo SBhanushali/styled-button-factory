@@ -30,10 +30,9 @@ const Navbar = () => {
           </HamburgerIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLink href="/docs">Docs</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/github">Github</NavLink>
+              <NavLink href="https://github.com/SBhanushali/styled-button-factory">
+                Github
+              </NavLink>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
