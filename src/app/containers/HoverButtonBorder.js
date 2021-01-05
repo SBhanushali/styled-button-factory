@@ -21,7 +21,7 @@ import {
 import { border } from "../constants/Borders";
 
 const HoverButtonBorder = () => {
-  const borderState = useSelector((state) => state.hoverButtonBorder.present);
+  const borderState = useSelector((state) => state.present.hoverButtonBorder);
   const dispatch = useDispatch();
   return (
     <>

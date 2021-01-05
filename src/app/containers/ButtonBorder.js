@@ -21,7 +21,7 @@ import {
 import { border } from "../constants/Borders";
 
 const ButtonBorder = () => {
-  const borderState = useSelector((state) => state.buttonBorder.present);
+  const borderState = useSelector((state) => state.present.buttonBorder);
   const dispatch = useDispatch();
   return (
     <>

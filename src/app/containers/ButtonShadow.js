@@ -22,7 +22,7 @@ import {
 } from "../../features/ButtonShadowSlice";
 
 const ButtonShadow = () => {
-  const shadowState = useSelector((state) => state.buttonShadow.present);
+  const shadowState = useSelector((state) => state.present.buttonShadow);
   const dispatch = useDispatch();
   return (
     <Box boundary p="10px" width="100%" mb="5px" mt="5px">

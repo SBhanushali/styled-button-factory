@@ -19,24 +19,24 @@ const ModalContent = styled.div`
 `;
 
 const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
-  const buttonDefault = useSelector((state) => state.buttonDefault.present);
+  const buttonDefault = useSelector((state) => state.present.buttonDefault);
   const [code, setCode] = useState("");
   const buttonBackground = useSelector(
-    (state) => state.buttonBackground.present
+    (state) => state.present.buttonBackground
   );
-  const buttonBorder = useSelector((state) => state.buttonBorder.present);
-  const buttonShadow = useSelector((state) => state.buttonShadow.present);
+  const buttonBorder = useSelector((state) => state.present.buttonBorder);
+  const buttonShadow = useSelector((state) => state.present.buttonShadow);
   const hoverButtonDefault = useSelector(
-    (state) => state.hoverButtonDefault.present
+    (state) => state.present.hoverButtonDefault
   );
   const hoverButtonBackground = useSelector(
-    (state) => state.hoverButtonBackground.present
+    (state) => state.present.hoverButtonBackground
   );
   const hoverButtonBorder = useSelector(
-    (state) => state.hoverButtonBorder.present
+    (state) => state.present.hoverButtonBorder
   );
   const hoverButtonShadow = useSelector(
-    (state) => state.hoverButtonShadow.present
+    (state) => state.present.hoverButtonShadow
   );
   const generateCode = useCallback(() => {
     let styledButton = `import styled from "styled-components";\n\n`;

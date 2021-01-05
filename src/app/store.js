@@ -12,15 +12,15 @@ import hoverButtonDefaultReducer from "../features/HoverButtonDefaultSlice";
 import resetReducer from "../features/ResetSlice";
 
 const combineReducer = combineReducers({
-  canvas: undoable(canvasBackgroundReducer),
-  buttonDefault: undoable(buttonDefaultReducer),
-  buttonBackground: undoable(buttonBackgroundReducer),
-  buttonBorder: undoable(buttonBorderReducer),
-  buttonShadow: undoable(buttonShadowReducer),
-  hoverButtonDefault: undoable(hoverButtonDefaultReducer),
-  hoverButtonBackground: undoable(hoverButtonBackgroundReducer),
-  hoverButtonBorder: undoable(hoverButtonBorderReducer),
-  hoverButtonShadow: undoable(hoverButtonShadowReducer),
+  canvas: canvasBackgroundReducer,
+  buttonDefault: buttonDefaultReducer,
+  buttonBackground: buttonBackgroundReducer,
+  buttonBorder: buttonBorderReducer,
+  buttonShadow: buttonShadowReducer,
+  hoverButtonDefault: hoverButtonDefaultReducer,
+  hoverButtonBackground: hoverButtonBackgroundReducer,
+  hoverButtonBorder: hoverButtonBorderReducer,
+  hoverButtonShadow: hoverButtonShadowReducer,
   reset: resetReducer,
 });
 
@@ -32,5 +32,5 @@ const rootReducer = (state, action) => {
 };
 
 export default configureStore({
-  reducer: rootReducer,
+  reducer: undoable(rootReducer),
 });

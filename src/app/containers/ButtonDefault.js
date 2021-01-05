@@ -23,7 +23,7 @@ import { fonts } from "../constants/Fonts";
 import { weights } from "../constants/weights";
 
 const ButtonDefault = () => {
-  const defaultState = useSelector((state) => state.buttonDefault.present);
+  const defaultState = useSelector((state) => state.present.buttonDefault);
   const dispatch = useDispatch();
   return (
     <>

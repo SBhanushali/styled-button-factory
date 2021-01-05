@@ -22,7 +22,7 @@ import {
 } from "../../features/HoverButtonShadowSlice";
 
 const HoverButtonShadow = () => {
-  const shadowState = useSelector((state) => state.hoverButtonShadow.present);
+  const shadowState = useSelector((state) => state.present.hoverButtonShadow);
   const dispatch = useDispatch();
   return (
     <Box boundary p="10px" width="100%" mb="5px" mt="5px">

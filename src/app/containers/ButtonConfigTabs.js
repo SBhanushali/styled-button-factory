@@ -29,7 +29,7 @@ import HoverButtonDefault from "./HoverButtonDefault";
 const { TabPane } = Tabs;
 
 const ButtonConfigTabs = () => {
-  const defaultState = useSelector((state) => state.hoverButtonDefault.present);
+  const defaultState = useSelector((state) => state.present.hoverButtonDefault);
   const dispatch = useDispatch();
   const sync = () => {
     dispatch(syncDefault());

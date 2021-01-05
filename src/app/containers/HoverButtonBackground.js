@@ -17,7 +17,7 @@ const gradientTypes = ["Linear", "Radial"];
 
 const HoverButtonBackground = () => {
   const buttonState = useSelector(
-    (state) => state.hoverButtonBackground.present
+    (state) => state.present.hoverButtonBackground
   );
   const [angle, setAngle] = useState(buttonState.gradientAngle);
   const dispatch = useDispatch();

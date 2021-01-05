@@ -3,24 +3,24 @@ import { useSelector } from "react-redux";
 import { StyledButton, StyledCanvas } from "../components";
 
 const Playground = () => {
-  const canvas = useSelector((state) => state.canvas.present);
-  const buttonDefault = useSelector((state) => state.buttonDefault.present);
+  const canvas = useSelector((state) => state.present.canvas);
+  const buttonDefault = useSelector((state) => state.present.buttonDefault);
   const buttonBackground = useSelector(
-    (state) => state.buttonBackground.present
+    (state) => state.present.buttonBackground
   );
-  const buttonBorder = useSelector((state) => state.buttonBorder.present);
-  const buttonShadow = useSelector((state) => state.buttonShadow.present);
+  const buttonBorder = useSelector((state) => state.present.buttonBorder);
+  const buttonShadow = useSelector((state) => state.present.buttonShadow);
   const hoverButtonDefault = useSelector(
-    (state) => state.hoverButtonDefault.present
+    (state) => state.present.hoverButtonDefault
   );
   const hoverButtonBackground = useSelector(
-    (state) => state.hoverButtonBackground.present
+    (state) => state.present.hoverButtonBackground
   );
   const hoverButtonBorder = useSelector(
-    (state) => state.hoverButtonBorder.present
+    (state) => state.present.hoverButtonBorder
   );
   const hoverButtonShadow = useSelector(
-    (state) => state.hoverButtonShadow.present
+    (state) => state.present.hoverButtonShadow
   );
   return (
     <StyledCanvas

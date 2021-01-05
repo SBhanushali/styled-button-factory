@@ -16,7 +16,7 @@ const backgroundTypes = ["Gradient", "Solid"];
 const gradientTypes = ["Linear", "Radial"];
 
 const ButtonBackground = () => {
-  const buttonState = useSelector((state) => state.buttonBackground.present);
+  const buttonState = useSelector((state) => state.present.buttonBackground);
   const [angle, setAngle] = useState(buttonState.gradientAngle);
   const dispatch = useDispatch();
   useDebouncedEffect(
