@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useCallback, useEffect } from "react";
 import { ActionCreators } from "redux-undo";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
@@ -14,10 +14,30 @@ const RedoIcon = styled(MdRedo)`
 
 const Redo = () => {
   const dispatch = useDispatch();
+  const redoRef = useRef();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const redoPressed = useCallback((e) => {
+    console.log(e.key);
+    if (
+      (e.ctrlKey && e.shiftKey && e.key === "z") ||
+      (e.metaKey && e.shiftKey && e.key === "z")
+    ) {
+      console.log("redo");
+      dispatch(ActionCreators.redo());
+    }
+  });
+
+  useEffect(() => {
+    document.addEventListener("keydown", redoPressed);
+    return () => {
+      document.removeEventListener("keydown", redoPressed);
+    };
+  }, [redoPressed]);
   return (
     <IconContainer
       tabIndex="0"
       as="button"
+      ref={redoRef}
       onClick={() => dispatch(ActionCreators.redo())}
     >
       <RedoIcon fontSize={[24, 24, 24, 36]} />
