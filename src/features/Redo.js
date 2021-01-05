@@ -17,12 +17,10 @@ const Redo = () => {
   const redoRef = useRef();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const redoPressed = useCallback((e) => {
-    console.log(e.key);
     if (
       (e.ctrlKey && e.shiftKey && e.key === "z") ||
       (e.metaKey && e.shiftKey && e.key === "z")
     ) {
-      console.log("redo");
       dispatch(ActionCreators.redo());
     }
   });
