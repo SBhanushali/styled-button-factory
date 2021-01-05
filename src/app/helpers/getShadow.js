@@ -8,7 +8,7 @@ const getShadow = (
 ) => {
   return `${
     shadowType === "Inset" ? shadowType : ""
-  } ${horizontalPlacement}px ${verticalPlacement}px ${blur} ${spread} ${shadowColor}`;
+  } ${horizontalPlacement}px ${verticalPlacement}px ${blur}px ${spread}px ${shadowColor}`;
 };
 
 export default getShadow;

@@ -42,91 +42,81 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
     isOpen && setCode(generateCode());
   }, [isOpen]);
   const generateCode = () => {
-    return `
-    const styledButton = styled.button\`
-          font-family: ${buttonDefault.font || ""};
-          font-size: ${buttonDefault.fontSize}px;
-          font-weight: ${buttonDefault.fontWeight || ""};
-          color: ${buttonDefault.textColor};
-          padding: ${buttonDefault.paddingY}px ${buttonDefault.paddingX}px;
-          cursor: ${buttonDefault.cursor || "default"};
-          ${getBackground(
-            buttonBackground.backgroundType,
-            buttonBackground.backgroundColor,
-            buttonBackground.gradientType,
-            buttonBackground.gradientStart,
-            buttonBackground.gradientEnd,
-            buttonBackground.gradientAngle
-          )}
-          box-shadow: ${
-            buttonShadow.hasShadow
-              ? getShadow(
-                  buttonShadow.shadowType,
-                  buttonShadow.horizontalPlacement,
-                  buttonShadow.verticalPlacement,
-                  buttonShadow.blur,
-                  buttonShadow.spread,
-                  buttonShadow.shadowColor
-                )
-              : "none"
-          };
-          ${
-            buttonBorder.hasBorder
-              ? getBorder(
-                  buttonBorder.borderType,
-                  buttonBorder.borderColor,
-                  buttonBorder.borderWidth
-                )
-              : ""
-          }
-          ${
-            buttonBorder.hasBorder &&
-            `border-radius: ${buttonBorder.borderRadius}px;`
-          }
-          ${
-            hoverButtonDefault.enableHover
-              ? `&:hover {
-            font-size: ${hoverButtonDefault.fontSize}px;
-            color: ${hoverButtonDefault.textColor};
-            ${getBackground(
-              hoverButtonBackground.backgroundType,
-              hoverButtonBackground.backgroundColor,
-              hoverButtonBackground.gradientType,
-              hoverButtonBackground.gradientStart,
-              hoverButtonBackground.gradientEnd,
-              hoverButtonBackground.gradientAngle
-            )}
-            box-shadow: ${
-              hoverButtonShadow.hasShadow
-                ? getShadow(
-                    hoverButtonShadow.shadowType,
-                    hoverButtonShadow.horizontalPlacement,
-                    hoverButtonShadow.verticalPlacement,
-                    hoverButtonShadow.blur,
-                    hoverButtonShadow.spread,
-                    hoverButtonShadow.shadowColor
-                  )
-                : "none"
-            };
-            ${
-              hoverButtonBorder.hasBorder
-                ? getBorder(
-                    hoverButtonBorder.borderType,
-                    hoverButtonBorder.borderColor,
-                    hoverButtonBorder.borderWidth,
-                    hoverButtonBorder.borderRadius
-                  )
-                : ""
-            }
-            ${
-              hoverButtonBorder.hasBorder &&
-              `border-radius: ${hoverButtonBorder.borderRadius}px;`
-            }`
-              : ""
-          }
-        \`
-        <StyledButton>${buttonDefault.buttonText}</StyledButton>
-      `;
+    let styledButton = `import styled from "styled-components";\n\n`;
+    styledButton += "const StyledButton = styled.button`\n";
+    if (buttonDefault.font)
+      styledButton += `\tfont-family: ${buttonDefault.font};\n`;
+    styledButton += `\tfont-size: ${buttonDefault.fontSize}px;\n`;
+    if (buttonDefault.fontWeight)
+      styledButton += `\tfont-weight: ${buttonDefault.fontWeight};\n`;
+    styledButton += `\tcolor: ${buttonDefault.textColor};\n`;
+    if (buttonDefault.paddingX !== 0 || buttonDefault.paddingY !== 0)
+      styledButton += `\tpadding: ${buttonDefault.paddingY}px ${buttonDefault.paddingX}px;\n`;
+    if (buttonDefault.cursor)
+      styledButton += `\tcursor: ${buttonDefault.cursor};\n`;
+    styledButton += getBackground(
+      buttonBackground.backgroundType,
+      buttonBackground.backgroundColor,
+      buttonBackground.gradientType,
+      buttonBackground.gradientStart,
+      buttonBackground.gradientEnd,
+      buttonBackground.gradientAngle
+    );
+    if (buttonShadow.hasShadow)
+      styledButton += `\tbox-shadow:${getShadow(
+        buttonShadow.shadowType,
+        buttonShadow.horizontalPlacement,
+        buttonShadow.verticalPlacement,
+        buttonShadow.blur,
+        buttonShadow.spread,
+        buttonShadow.shadowColor
+      )};\n`;
+    if (buttonBorder.hasBorder)
+      styledButton += getBorder(
+        buttonBorder.borderType,
+        buttonBorder.borderColor,
+        buttonBorder.borderWidth
+      );
+    if (buttonBorder.hasBorder)
+      styledButton += `\tborder-radius: ${buttonBorder.borderRadius}px;\n`;
+    if (hoverButtonDefault.enableHover) {
+      styledButton += `\t&:hover {\n`;
+      styledButton += `\t\tfont-size: ${hoverButtonDefault.fontSize}px;\n`;
+      styledButton += `\t\tcolor: ${hoverButtonDefault.textColor};\n`;
+      styledButton += `\t${getBackground(
+        hoverButtonBackground.backgroundType,
+        hoverButtonBackground.backgroundColor,
+        hoverButtonBackground.gradientType,
+        hoverButtonBackground.gradientStart,
+        hoverButtonBackground.gradientEnd,
+        hoverButtonBackground.gradientAngle
+      )}`;
+      if (hoverButtonShadow.hasShadow) {
+        styledButton += `\t\tbox-shadow:${getShadow(
+          hoverButtonShadow.shadowType,
+          hoverButtonShadow.horizontalPlacement,
+          hoverButtonShadow.verticalPlacement,
+          hoverButtonShadow.blur,
+          hoverButtonShadow.spread,
+          hoverButtonShadow.shadowColor
+        )};\n`;
+      }
+      if (hoverButtonBorder.hasBorder) {
+        styledButton += `\t${getBorder(
+          hoverButtonBorder.borderType,
+          hoverButtonBorder.borderColor,
+          hoverButtonBorder.borderWidth,
+          hoverButtonBorder.borderRadius
+        )}`;
+      }
+      if (hoverButtonBorder.hasBorder) {
+        styledButton += `\t\tborder-radius: ${hoverButtonBorder.borderRadius}px;\n`;
+      }
+      styledButton += "\t}\n";
+    }
+    styledButton += "`\n";
+    styledButton += "export default StyledButton;\n";
+    return styledButton;
   };
   return (
     <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>

@@ -1,7 +1,7 @@
 const getBorder = (borderType, borderColor, borderWidth) => {
-  let border = `border: ${
+  let border = `\tborder: ${
     borderType || "solid"
-  } ${borderColor} ${borderWidth}px;`;
+  } ${borderColor} ${borderWidth}px;\n`;
   return border;
 };
 
