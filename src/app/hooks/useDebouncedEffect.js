@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from "react";
 
 export const useDebouncedEffect = (effect, delay, deps) => {
-  const callback = useCallback(effect, deps);
+  const callback = useCallback(effect, [effect, ...deps]);
 
   useEffect(() => {
     const handler = setTimeout(() => {

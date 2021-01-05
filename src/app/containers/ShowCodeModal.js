@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -38,10 +38,7 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
   const hoverButtonShadow = useSelector(
     (state) => state.hoverButtonShadow.present
   );
-  useEffect(() => {
-    isOpen && setCode(generateCode());
-  }, [isOpen]);
-  const generateCode = () => {
+  const generateCode = useCallback(() => {
     let styledButton = `import styled from "styled-components";\n\n`;
     styledButton += "const StyledButton = styled.button`\n";
     if (buttonDefault.font)
@@ -117,7 +114,58 @@ const ShowCodeModal = ({ isOpen, handleOpenModal }) => {
     styledButton += "`\n";
     styledButton += "export default StyledButton;\n";
     return styledButton;
-  };
+  }, [
+    buttonBackground.backgroundColor,
+    buttonBackground.backgroundType,
+    buttonBackground.gradientAngle,
+    buttonBackground.gradientEnd,
+    buttonBackground.gradientStart,
+    buttonBackground.gradientType,
+    buttonBorder.borderColor,
+    buttonBorder.borderRadius,
+    buttonBorder.borderType,
+    buttonBorder.borderWidth,
+    buttonBorder.hasBorder,
+    buttonDefault.cursor,
+    buttonDefault.font,
+    buttonDefault.fontSize,
+    buttonDefault.fontWeight,
+    buttonDefault.paddingX,
+    buttonDefault.paddingY,
+    buttonDefault.textColor,
+    buttonShadow.blur,
+    buttonShadow.hasShadow,
+    buttonShadow.horizontalPlacement,
+    buttonShadow.shadowColor,
+    buttonShadow.shadowType,
+    buttonShadow.spread,
+    buttonShadow.verticalPlacement,
+    hoverButtonBackground.backgroundColor,
+    hoverButtonBackground.backgroundType,
+    hoverButtonBackground.gradientAngle,
+    hoverButtonBackground.gradientEnd,
+    hoverButtonBackground.gradientStart,
+    hoverButtonBackground.gradientType,
+    hoverButtonBorder.borderColor,
+    hoverButtonBorder.borderRadius,
+    hoverButtonBorder.borderType,
+    hoverButtonBorder.borderWidth,
+    hoverButtonBorder.hasBorder,
+    hoverButtonDefault.enableHover,
+    hoverButtonDefault.fontSize,
+    hoverButtonDefault.textColor,
+    hoverButtonShadow.blur,
+    hoverButtonShadow.hasShadow,
+    hoverButtonShadow.horizontalPlacement,
+    hoverButtonShadow.shadowColor,
+    hoverButtonShadow.shadowType,
+    hoverButtonShadow.spread,
+    hoverButtonShadow.verticalPlacement,
+  ]);
+  useEffect(() => {
+    isOpen && setCode(generateCode());
+  }, [generateCode, isOpen]);
+
   return (
     <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
       <ModalContent>
