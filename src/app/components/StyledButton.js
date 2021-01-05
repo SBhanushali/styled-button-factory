@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const buttonBackgroundSolid = css`
-  background-color: ${(props) => props.backgroundColor};
+  background: ${(props) => props.backgroundColor};
 `;
 const buttonBackgroundRadial = css`
   background: ${(props) => props.gradientStart};
@@ -35,7 +35,7 @@ const buttonShadow = css`
 `;
 
 const hoverButtonBackgroundSolid = css`
-  background-color: ${(props) => props.hoverBackgroundColor};
+  background: ${(props) => props.hoverBackgroundColor};
 `;
 const hoverButtonBackgroundRadial = css`
   background: ${(props) => props.hoverGradientStart};
@@ -68,6 +68,27 @@ const hoverButtonShadow = css`
   }};
 `;
 
+const hover = css`
+  &:hover {
+    font-size: ${(props) => `${props.hoverFontSize}px`};
+    color: ${(props) => props.hoverColor};
+    box-shadow: ${(props) => props.hoverBoxShadow};
+    ${(props) => {
+      if (props.hoverBackgroundType === "Solid") {
+        return hoverButtonBackgroundSolid;
+      } else if (props.hoverBackgroundType === "Gradient") {
+        if (props.hoverGradientType === "Linear") {
+          return hoverButtonBackgroundLinear;
+        } else {
+          return hoverButtonBackgroundRadial;
+        }
+      }
+    }};
+    ${(props) => (props.hoverHasBorder ? hoverButtonBorder : "")};
+    ${(props) => (props.hoverHasShadow ? hoverButtonShadow : "")};
+  }
+`;
+
 const StyledButton = styled.button`
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "")};
   font-size: ${(props) => `${props.fontSize}px`};
@@ -93,24 +114,7 @@ const StyledButton = styled.button`
           border: none;
         `};
   ${(props) => (props.hasShadow ? buttonShadow : "")};
-  &:hover {
-    font-size: ${(props) => `${props.hoverFontSize}px`};
-    color: ${(props) => props.hoverColor};
-    box-shadow: ${(props) => props.hoverBoxShadow};
-    ${(props) => {
-      if (props.hoverBackgroundType === "Solid") {
-        return hoverButtonBackgroundSolid;
-      } else if (props.hoverBackgroundType === "Gradient") {
-        if (props.hoverGradientType === "Linear") {
-          return hoverButtonBackgroundLinear;
-        } else {
-          return hoverButtonBackgroundRadial;
-        }
-      }
-    }};
-    ${(props) => (props.hoverHasBorder ? hoverButtonBorder : "")};
-    ${(props) => (props.hoverHasShadow ? hoverButtonShadow : "")};
-  }
+  ${(props) => props.enableHover && hover};
 `;
 
 export default StyledButton;

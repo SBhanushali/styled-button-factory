@@ -62,6 +62,7 @@ const Playground = () => {
         borderColor={buttonBorder.borderColor}
         borderWidth={buttonBorder.borderWidth}
         borderRadius={buttonBorder.borderRadius}
+        enableHover={hoverButtonDefault.enableHover}
         hoverFontSize={hoverButtonDefault.fontSize}
         hoverColor={hoverButtonDefault.textColor}
         hoverBackgroundType={hoverButtonBackground.backgroundType}
