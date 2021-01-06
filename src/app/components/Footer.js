@@ -21,7 +21,7 @@ const Link = styled.a`
 
 const Footer = () => {
   return (
-    <Box py="20px">
+    <Box my="40px">
       <Row alignItems="center" justifyContent="center">
         Made in <Icon src={india} /> by Shivam Bhanushali
       </Row>

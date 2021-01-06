@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import GlobalStyles from "./app/globalStyles";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "antd/dist/antd.css";
 import Footer from "./app/components/Footer";
 import StyledButtonGenerator from "./app/containers/StyledButtonGenerator";
