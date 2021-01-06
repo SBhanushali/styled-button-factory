@@ -2,6 +2,7 @@ import styled from "styled-components";
 import StyledButtonLogo from "../../assets/svgexport-103.svg";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { Container } from "../../globalStyles";
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: #ffffff;
@@ -22,7 +23,7 @@ export const NavbarContainer = styled(Container)`
   max-width: 100%;
 `;
 
-export const NavLogo = styled.a`
+export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -90,7 +91,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   color: #000;
   display: flex;
   align-items: flex-end;

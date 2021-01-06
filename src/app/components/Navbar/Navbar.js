@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo href="/">
+          <NavLogo to="/">
             <NavIcon />
           </NavLogo>
           <HamburgerIcon onClick={handleClick}>
