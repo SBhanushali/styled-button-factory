@@ -5,7 +5,7 @@ export const buttonBorderSlice = createSlice({
   initialState: {
     hasBorder: true,
     borderType: undefined,
-    borderColor: "#ffffff",
+    borderColor: "#000000",
     borderWidth: 1,
     borderRadius: 0,
   },

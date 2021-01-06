@@ -4,7 +4,7 @@ const hoverButtonDefaultSlice = createSlice({
   name: "hoverButtonDefault",
   initialState: {
     enableHover: false,
-    fontSize: 14,
+    fontSize: 18,
     textColor: "#000000",
   },
   reducers: {
