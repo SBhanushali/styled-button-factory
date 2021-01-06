@@ -46,7 +46,7 @@ export const {
 } = hoverButtonBackgroundSlice.actions;
 
 export const syncBackground = () => (dispatch, setState) => {
-  const background = setState().buttonBackground.present;
+  const background = setState().present.buttonBackground;
   dispatch(setSyncBackground(background));
 };
 

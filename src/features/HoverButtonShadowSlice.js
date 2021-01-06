@@ -51,7 +51,7 @@ export const {
 } = hoverButtonShadowSlice.actions;
 
 export const syncShadow = () => (dispatch, setState) => {
-  const shadow = setState().buttonShadow.present;
+  const shadow = setState().present.buttonShadow;
   dispatch(setSyncShadow(shadow));
 };
 

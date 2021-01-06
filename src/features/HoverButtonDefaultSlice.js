@@ -27,7 +27,7 @@ export const {
 } = hoverButtonDefaultSlice.actions;
 
 export const syncDefault = () => (dispatch, getState) => {
-  const { fontSize, textColor } = getState().buttonDefault.present;
+  const { fontSize, textColor } = getState().present.buttonDefault;
   dispatch(setFontSize(fontSize));
   dispatch(setTextColor(textColor));
 };

@@ -41,7 +41,7 @@ export const {
 } = hoverButtonBorderSlice.actions;
 
 export const syncBorder = () => (dispatch, setState) => {
-  const border = setState().buttonBorder.present;
+  const border = setState().present.buttonBorder;
   dispatch(setSyncBorder(border));
 };
 
