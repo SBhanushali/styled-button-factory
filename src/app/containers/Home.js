@@ -121,7 +121,12 @@ const Home = () => {
         </Col>
         <Col width={[1, 1, 1, 1 / 3]}>
           <ImgContainer>
-            <object type="image/svg+xml" data={embed} height="" width="300px">
+            <object
+              type="image/svg+xml"
+              data={embed}
+              height="292px"
+              width="300px"
+            >
               include
             </object>
           </ImgContainer>
