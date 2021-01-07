@@ -49,7 +49,7 @@ const Footer = () => {
       </Box>
 
       <Row alignItems="center" justifyContent="center" my="20px">
-        <Text fontSize="24px">
+        <Text fontSize={["1rem", "1.5rem", "1.5rem", "1.5rem"]}>
           Made in <Icon src={india} /> by Shivam Bhanushali
         </Text>
       </Row>
