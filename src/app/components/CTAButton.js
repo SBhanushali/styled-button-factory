@@ -11,7 +11,7 @@ const CTAButton = styled(Link)`
   border-radius: 5px;
   &:hover {
     font-size: 24px;
-    background: #fdbb2d;
+    background: #ef8d23;
     color: #ffffff;
     border-radius: 5px;
   }

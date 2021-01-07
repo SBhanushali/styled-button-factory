@@ -17,7 +17,7 @@ const GetInTouch = styled.a`
   border: solid #ffffff 1px;
   border-radius: 5px;
   &:hover {
-    background: #fdbb2d;
+    background: #ef8d23;
     color: #ffffff;
     border-radius: 5px;
   }
