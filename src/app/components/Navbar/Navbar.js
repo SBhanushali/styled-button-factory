@@ -25,7 +25,10 @@ const Navbar = () => {
           </NavLogo>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLink href="https://github.com/SBhanushali/styled-button-factory">
+              <NavLink
+                href="https://github.com/SBhanushali/styled-button-factory"
+                alt="github"
+              >
                 <Github />
               </NavLink>
             </NavItem>
