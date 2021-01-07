@@ -27,7 +27,9 @@ const Navbar = () => {
             <NavItem>
               <NavLink
                 href="https://github.com/SBhanushali/styled-button-factory"
-                alt="github"
+                alt="github/SBhanushali"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github />
               </NavLink>

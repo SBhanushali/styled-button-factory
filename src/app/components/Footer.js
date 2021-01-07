@@ -49,7 +49,11 @@ const Footer = () => {
         I'd love to hear any feedback/suggestions
       </Text>
       <Box display="flex" justifyContent="center" alignItems="center" my="10px">
-        <GetInTouch href="mailto:shivam.n.bhanushali@gmail.com">
+        <GetInTouch
+          href="mailto:shivam.n.bhanushali@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Get in touch
         </GetInTouch>
       </Box>
@@ -60,16 +64,35 @@ const Footer = () => {
         </Text>
       </Row>
       <Row justifyContent="center">
-        <Link href="https://www.linkedin.com/in/shivam-bhanushali/">
+        <Link
+          href="https://www.linkedin.com/in/shivam-bhanushali/"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="linkedin/shivam-bhanushali"
+        >
           <FaLinkedin />
         </Link>
-        <Link href="https://twitter.com/Shivbhanushali">
+        <Link
+          href="https://twitter.com/Shivbhanushali"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="twitter/Shivbhanushali"
+        >
           <FaTwitter />
         </Link>
-        <Link href="https://github.com/SBhanushali">
+        <Link
+          href="https://github.com/SBhanushali"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="github/SBhanushali"
+        >
           <FaGithub />
         </Link>
-        <Link href="mailto:shivam.n.bhanushali@gmail.com">
+        <Link
+          href="mailto:shivam.n.bhanushali@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaEnvelope />
         </Link>
       </Row>
