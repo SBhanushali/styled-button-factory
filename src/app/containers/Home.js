@@ -17,7 +17,7 @@ const ImgContainer = styled(Box)`
 `;
 
 const Heading = styled(Text)`
-  font-weight: bolder;
+  font-weight: 900;
   margin: 0 10px;
 `;
 

@@ -34,12 +34,12 @@ export const RadioButton = styled.label`
     outline: none;
     background: #ffffff;
     color: #fdbb2c;
-    font-weight: bolder;
+    font-weight: 900;
     border-radius: 4px;
   }
   &:hover {
     color: #fdbb2c;
-    font-weight: bolder;
+    font-weight: 900;
     border-radius: 4px;
   }
 `;

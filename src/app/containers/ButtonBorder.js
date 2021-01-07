@@ -27,7 +27,7 @@ const ButtonBorder = () => {
     <>
       <Box boundary p="10px" width="100%" mb="5px" mt="5px">
         <Box display="flex" justifyContent="space-between">
-          <Text fontWeight="bold" fontSize="14px">
+          <Text fontWeight="400" fontSize="14px">
             Button Border
           </Text>
           <StyledSwitch>

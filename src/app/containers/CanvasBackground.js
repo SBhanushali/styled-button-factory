@@ -28,7 +28,7 @@ const CanvasBackground = () => {
   );
   return (
     <Box boundary p="10px">
-      <Text fontWeight="bold" fontSize="14px">
+      <Text fontWeight="400" fontSize="14px">
         Canvas Background
       </Text>
       <Box
