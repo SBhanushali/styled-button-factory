@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const buttonDefaultSlice = createSlice({
   name: "buttonDefault",
   initialState: {
-    buttonText: "Text",
+    buttonText: "Button",
     font: undefined,
     fontSize: 18,
     fontWeight: undefined,
     textColor: "#000000",
     cursor: undefined,
-    paddingX: 0,
-    paddingY: 0,
+    paddingX: 10,
+    paddingY: 10,
   },
   reducers: {
     setButtonText: (state, action) => {
