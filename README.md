@@ -2,7 +2,7 @@
 
 [![Styled Button](./src/app/assets/styledbutton.png)](https://styled-button.vercel.app/)
 
-##### A live button generator that generates styled-components code with few clicks.
+### A live button generator that generates styled-components code with few clicks.
 
 This design tool helps you to design buttons by configuring button properties like font-size, padding, shadow, background-color, border in default as well as hover state.
 
