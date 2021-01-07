@@ -8,9 +8,7 @@ import {
   NavMenu,
   NavItem,
   NavLink,
-  HamburgerIcon,
-  Cross,
-  Hamburger,
+  Github,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -23,15 +21,12 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon />
+            <NavIcon alt="Styled Button" />
           </NavLogo>
-          <HamburgerIcon onClick={handleClick}>
-            {click ? <Cross /> : <Hamburger />}
-          </HamburgerIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLink href="https://github.com/SBhanushali/styled-button-factory">
-                Github
+                <Github />
               </NavLink>
             </NavItem>
           </NavMenu>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import StyledButtonLogo from "../../assets/svgexport-103.svg";
-import { FaTimes, FaBars } from "react-icons/fa";
+import StyledButtonLogo from "../../assets/logo.svg";
+import { FaGithub } from "react-icons/fa";
 import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 
@@ -32,27 +32,14 @@ export const NavLogo = styled(Link)`
 
 export const NavIcon = styled.img.attrs({
   src: `${StyledButtonLogo}`,
-})``;
-
-export const HamburgerIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: 960px) {
-    display: block;
-    position: absolute;
-    top: -10px;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.9rem;
-    cursor: pointer;
-  }
+})`
+  cursor: default;
 `;
 
-export const Cross = styled(FaTimes)`
+export const Github = styled(FaGithub)`
   color: #fdbb2d;
-`;
-export const Hamburger = styled(FaBars)`
-  color: #fdbb2d;
+  font-size: 36px;
+  margin-bottom: -0.5em;
 `;
 
 export const NavMenu = styled.ul`
@@ -60,18 +47,6 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-
-  @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
-    opacity: 1;
-    background: #fff;
-  }
 `;
 
 export const NavItem = styled.li`
@@ -81,36 +56,17 @@ export const NavItem = styled.li`
   &:hover {
     border-bottom: 2px solid #fdbb2d;
   }
-
-  @media screen and (max-width: 960px) {
-    width: 100%;
-    &:hover {
-      border: none;
-    }
-  }
 `;
 
 export const NavLink = styled.a`
   color: #000;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
 
   &:hover {
     color: #fdbb2d;
-  }
-
-  @media screen and (max-width: 960px) {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-
-    &:hover {
-      color: #fdbb2d;
-      transition: all 0.3s ease;
-    }
   }
 `;
