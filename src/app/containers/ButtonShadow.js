@@ -34,6 +34,7 @@ const ButtonShadow = () => {
           <Switch
             checked={shadowState.hasShadow}
             onChange={() => dispatch(setHasShadow())}
+            aria-label="Toggle button shadow"
           />
         </StyledSwitch>
       </Box>

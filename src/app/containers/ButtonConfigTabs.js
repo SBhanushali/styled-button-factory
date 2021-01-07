@@ -89,6 +89,7 @@ const ButtonConfigTabs = () => {
                 <Switch
                   checked={defaultState.enableHover}
                   onChange={() => dispatch(setEnableHover())}
+                  aria-label="Toggle button hover"
                 ></Switch>
               </StyledSwitch>
             </Col>

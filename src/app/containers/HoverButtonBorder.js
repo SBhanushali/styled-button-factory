@@ -34,6 +34,7 @@ const HoverButtonBorder = () => {
             <Switch
               checked={borderState.hasBorder}
               onChange={() => dispatch(setHasBorder())}
+              aria-label="Toggle hover button border"
             />
           </StyledSwitch>
         </Box>

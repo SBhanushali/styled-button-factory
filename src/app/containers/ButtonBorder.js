@@ -34,6 +34,7 @@ const ButtonBorder = () => {
             <Switch
               checked={borderState.hasBorder}
               onChange={() => dispatch(setHasBorder())}
+              aria-label="Toggle button border"
             />
           </StyledSwitch>
         </Box>
