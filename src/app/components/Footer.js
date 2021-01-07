@@ -9,7 +9,7 @@ const FooterContainer = styled(Box)`
 `;
 
 const GetInTouch = styled.a`
-  font-size: 24px;
+  font-size: 1rem;
   color: #ffffff;
   padding: 10px 15px;
   background: #fdbb2c;
@@ -41,15 +41,21 @@ const Link = styled.a`
 
 const Footer = () => {
   return (
-    <FooterContainer mt="40px">
-      <Box display="flex" justifyContent="center" alignItems="center" pt="20px">
+    <FooterContainer mt="40px" pt="10px">
+      <Text
+        fontSize={["1rem", "1.2rem", "1.2rem", "1.2rem"]}
+        textAlign="center"
+      >
+        I'd love to hear any feedback/suggestions
+      </Text>
+      <Box display="flex" justifyContent="center" alignItems="center" my="10px">
         <GetInTouch href="mailto:shivam.n.bhanushali@gmail.com">
           Get in touch
         </GetInTouch>
       </Box>
 
       <Row alignItems="center" justifyContent="center" my="20px">
-        <Text fontSize={["1rem", "1.5rem", "1.5rem", "1.5rem"]}>
+        <Text fontSize="1rem">
           Made in <Icon src={india} /> by Shivam Bhanushali
         </Text>
       </Row>
