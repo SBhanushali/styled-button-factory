@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import india from "../assets/india.png";
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Box, Row, Text } from ".";
 
@@ -23,7 +22,7 @@ const GetInTouch = styled.a`
   }
 `;
 
-const Icon = styled.img`
+const India = styled.span`
   height: 24px;
   width: 24px;
   margin: 0 5px;
@@ -60,7 +59,7 @@ const Footer = () => {
 
       <Row alignItems="center" justifyContent="center" my="20px">
         <Text fontSize="1rem">
-          Made in <Icon src={india} /> by Shivam Bhanushali
+          Made in <India>🇮🇳</India> by Shivam Bhanushali
         </Text>
       </Row>
       <Row justifyContent="center">
