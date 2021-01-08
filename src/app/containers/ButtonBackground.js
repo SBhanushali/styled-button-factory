@@ -23,7 +23,7 @@ const ButtonBackground = () => {
     () => {
       dispatch(setGradientAngle(angle));
     },
-    100,
+    10,
     [angle]
   );
   return (
