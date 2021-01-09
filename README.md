@@ -1,4 +1,4 @@
-# styled-button-factory
+# Styled Button
 
 [![Styled Button](./src/app/assets/styledbutton.png)](https://styled-button.vercel.app/)
 
