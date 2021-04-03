@@ -15,6 +15,7 @@ const StyledButtonGenerator = () => {
   const handleOpenModal = () => {
     toggle((prev) => !prev);
   };
+  
   return (
     <>
       <ShowCodeModal isOpen={isOpen} handleOpenModal={handleOpenModal} />
