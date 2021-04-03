@@ -7,12 +7,12 @@ const getBackground = (
   gradientAngle = ""
 ) => {
   if (backgroundType === "Solid") {
-    return `\tbackground: ${backgroundColor};\n`;
+    return backgroundColor;
   } else if (backgroundType === "Gradient") {
     if (gradientType === "Linear") {
-      return `\tbackground: linear-gradient(${gradientAngle}deg, ${gradientStart}, ${gradientEnd});\n`;
+      return `linear-gradient(${gradientAngle}deg, ${gradientStart}, ${gradientEnd})`;
     } else {
-      return `\tbackground: radial-gradient(circle, ${gradientStart}, ${gradientEnd});\n`;
+      return `radial-gradient(circle, ${gradientStart}, ${gradientEnd})`;
     }
   }
 };
